@@ -33,7 +33,6 @@ const Home: NextPage = () => {
         axios.defaults.headers = {
           Authorization: `Bearer ${token}`
         }
-        console.log({ token })
       }
     })()
   }, [user])
@@ -44,6 +43,9 @@ const Home: NextPage = () => {
 
   const handleSignOut = async () => {
     await firebaseAuth.signOut()
+    axios.defaults.headers = {
+      Authorization: null
+    }
   }
 
   const handleForm = (fn: any) => {
