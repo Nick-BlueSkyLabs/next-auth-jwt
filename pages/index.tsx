@@ -10,7 +10,7 @@ const firebaseApp = initializeApp(firebaseConfig)
 const firebaseAuth = getAuth(firebaseApp)
 const googleProvider = new GoogleAuthProvider()
 const axios = Axios.create({
-  baseURL: "https://echo-api-gateway-1yrvv7cx.ts.gateway.dev/api/"
+  baseURL: "https://echo-api-gateway-1yrvv7cx.ts.gateway.dev/"
 })
 
 const Home: NextPage = () => {
